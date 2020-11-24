@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
-    <AppNavBar :loggedIn="loggedIn"/>
-    <AppForm/>
+    <AppNavBar :loggedIn="loggedIn" :user="user" @logOutUser="logOut" />
+    <AppForm :loggedIn="loggedIn" @logInUser="logIn" />
   </div>
 </template>
 
@@ -16,7 +16,18 @@ export default {
   },
   data(){
     return {
-      loggedIn: false
+      loggedIn: false,
+      user: {},
+    }
+  },
+  methods:{
+    logIn(user){
+      this.user = Object.assign({}, user);
+      this.loggedIn = true;
+    },
+    logOut(){
+      this.user = {},
+      this.loggedIn = false;
     }
   }
 }
