@@ -16,16 +16,21 @@
     </div>
     <div v-else>
         <span class="navbar-text white-text">
-            John Lundgren
+            {{ user.name }}
         </span>
-        <button class="btn btn-outline-white" type="button">Log out</button>
+        <button @click="logOut" class="btn btn-outline-white" type="button">Log out</button>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-    props: ['loggedIn']
+    props: ['loggedIn', 'user'],
+    methods: {
+        logOut(){
+            this.$emit('logOutUser');
+        }
+    }
 };
 </script>
 
