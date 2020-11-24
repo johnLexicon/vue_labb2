@@ -11,7 +11,7 @@
     <input v-model="password" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
     <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+    <button :disabled="loggedIn" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
 
 </form>
 <!-- Default form login -->
