@@ -18,7 +18,7 @@
         <span class="navbar-text white-text">
             {{ user.name }}
         </span>
-        <button @click="logOut" class="btn btn-outline-white" type="button">Log out</button>
+        <button @click="logOut" class="btn btn-sm btn-outline-white" type="button">Log out</button>
     </div>
   </nav>
 </template>
