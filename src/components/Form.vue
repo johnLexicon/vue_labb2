@@ -5,7 +5,7 @@
 
     <!-- Name -->
     <input
-      v-model="name"
+      v-model="user.name"
       type="text"
       id="defaultLoginFormName"
       class="form-control mb-4"
@@ -14,7 +14,7 @@
 
     <!-- Password -->
     <input
-      v-model="password"
+      v-model="user.password"
       type="password"
       id="defaultLoginFormPassword"
       class="form-control mb-4"
@@ -38,8 +38,10 @@ export default {
   props: ["loggedIn"],
   data() {
     return {
-      name: "",
-      password: "",
+      user: {
+          name:'',
+          password:''
+      }
     };
   },
   methods: {
@@ -48,9 +50,9 @@ export default {
         alert("You have to log out first!!!!");
         return;
       }
-      const user = { name: this.name, password: this.password };
-      this.$emit("logInUser", user);
-      (this.name = ""), (this.password = "");
+      this.$emit('logInUser', {...this.user}); // Copying object with the spread operator.
+    //   this.$emit("logInUser", Object.assign({}, this.user)); //Copying object with Object.assign
+      this.user = {name: '', password:''};
     },
   },
 };

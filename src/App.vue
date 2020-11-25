@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container mt-4">
     <AppNavBar :loggedIn="loggedIn" :user="user" @logOutUser="logOut" />
     <AppForm :loggedIn="loggedIn" @logInUser="logIn" />
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   methods:{
     logIn(user){
-      this.user = Object.assign({}, user);
+      this.user = user;
       this.loggedIn = true;
     },
     logOut(){

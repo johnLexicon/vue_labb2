@@ -16,7 +16,7 @@
     </div>
     <div v-else>
         <span class="navbar-text white-text">
-            {{ user.name }}
+            Logged in as: {{ user.name }}
         </span>
         <button @click="logOut" class="btn btn-sm btn-outline-white" type="button">Log out</button>
     </div>
@@ -34,5 +34,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+    div span{
+        font-weight: 400;
+        margin-right: 1rem;
+    }
 </style>
