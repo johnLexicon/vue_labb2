@@ -10,6 +10,7 @@
       id="defaultLoginFormName"
       class="form-control mb-4"
       placeholder="name"
+      required
     />
 
     <!-- Password -->
@@ -19,6 +20,7 @@
       id="defaultLoginFormPassword"
       class="form-control mb-4"
       placeholder="Password"
+      required
     />
 
     <!-- Sign in button -->
