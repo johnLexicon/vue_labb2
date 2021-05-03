@@ -1,42 +1,40 @@
 <template>
-  <div id="app" class="container mt-4">
+  <div class="vh-100">
     <AppNavBar :loggedIn="loggedIn" :user="user" @logOutUser="logOut" />
-    <AppForm :loggedIn="loggedIn" @logInUser="logIn" />
+    <div
+      class="container h-100 d-flex justify-content-center align-items-center"
+    >
+      <AppForm :loggedIn="loggedIn" @logInUser="logIn" />
+    </div>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar';
-import Form from './components/Form';
+import NavBar from "./components/NavBar";
+import Form from "./components/Form";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AppNavBar: NavBar,
-    AppForm: Form
+    AppForm: Form,
   },
-  data(){
+  data() {
     return {
       loggedIn: false,
       user: {},
-    }
+    };
   },
-  methods:{
-    logIn(user){
+  methods: {
+    logIn(user) {
       this.user = user;
       this.loggedIn = true;
     },
-    logOut(){
-      this.user = {},
-      this.loggedIn = false;
-    }
-  }
-}
+    logOut() {
+      (this.user = {}), (this.loggedIn = false);
+    },
+  },
+};
 </script>
 
 <style>
-  *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-  }
 </style>
