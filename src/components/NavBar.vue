@@ -1,6 +1,6 @@
 <template>
   <!-- Just an image -->
-  <nav class="navbar navbar-dark">
+  <nav class="navbar navbar-dark fixed-top">
     <a class="navbar-brand" href="#">
       <img src="@/assets/img/lexicon.jpg" height="30" alt="Lexicon logo" />
     </a>

@@ -1,6 +1,6 @@
 <template>
   <!-- Default form login -->
-  <form class="text-center p-5 w-50 shadow" @submit.prevent="logIn">
+  <form class="text-center p-5 w-75 shadow" @submit.prevent="logIn">
     <p class="h4 mb-4">Sign in</p>
 
     <!-- Name -->
