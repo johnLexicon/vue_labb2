@@ -1,20 +1,21 @@
 <template>
   <!-- Just an image -->
-  <nav class="navbar navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">
-      <img src="@/assets/img/lexicon.jpg" height="30" alt="Lexicon logo" />
-    </a>
-
-    <div v-if="loggedIn === false">
-      <span class="navbar-text text-muted"> Please Log In </span>
-    </div>
-    <div v-else>
-      <span class="navbar-text text-muted">
-        Logged in as: {{ user.name }}
-      </span>
-      <button @click="logOut" class="btn btn-danger btn-sm" type="button">
-        Log out
-      </button>
+  <nav class="navbar bg-light fixed-top shadow-sm border-bottom">
+    <div class="container-md container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="@/assets/img/lexicon.jpg" height="30" alt="Lexicon logo" />
+      </a>
+      <div v-if="loggedIn === false">
+        <span class="navbar-text text-muted"> Please Log In </span>
+      </div>
+      <div v-else>
+        <span class="navbar-text text-muted">
+          Logged in as: {{ user.name }}
+        </span>
+        <button @click="logOut" class="btn btn-danger btn-sm" type="button">
+          Log out
+        </button>
+      </div>
     </div>
   </nav>
 </template>
